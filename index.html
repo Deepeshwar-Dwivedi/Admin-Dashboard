@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Pro</h2>
+        <button id="sidebarToggle" class="sidebar-toggle">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+      </div>
+      <nav>
+        <ul>
+          <li class="active">
+            <a href="#">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-chart-line"></i>
+              <span>Analytics</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              <span>Users</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-box"></i>
+              <span>Products</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-shopping-cart"></i>
+              <span>Orders</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-cog"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="theme-switcher" id="themeSwitcher">
+          <i class="fas fa-moon"></i>
+          <span>Dark Mode</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <header class="navbar">
+        <div class="navbar-left">
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <h1>Dashboard</h1>
+        </div>
+        <div class="navbar-right">
+          <div class="notification-bell">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+          </div>
+          <div class="user-profile" id="userProfile">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="user-avatar">
+            <span class="user-name">Sarah Johnson</span>
+            <i class="fas fa-chevron-down"></i>
+            <div class="user-dropdown" id="userDropdown">
+              <a href="#"><i class="fas fa-user"></i> My Profile</a>
+              <a href="#"><i class="fas fa-cog"></i> Settings</a>
+              <a href="#"><i class="fas fa-envelope"></i> Messages</a>
+              <div class="divider"></div>
+              <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="content-area">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="page-title">
+            <h1>Welcome back, Sarah</h1>
+            <p>Here's what's happening with your store today</p>
+          </div>
+          <div class="page-actions">
+            <button>
+              <i class="fas fa-plus"></i>
+              <span>New Report</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="stat-card users fade-in" style="animation-delay: 0.1s;">
+            <div class="stat-header">
+              <h3 class="stat-title">Total Users</h3>
+              <div class="stat-icon users">
+                <i class="fas fa-users"></i>
+              </div>
+            </div>
+            <h2 class="stat-value">1,254</h2>
+            <div class="stat-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>12.5% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card sales fade-in" style="animation-delay: 0.2s;">
+            <div class="stat-header">
+              <h3 class="stat-title">Total Sales</h3>
+              <div class="stat-icon sales">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+            </div>
+            <h2 class="stat-value">$8,420</h2>
+            <div class="stat-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>8.3% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card visitors fade-in" style="animation-delay: 0.3s;">
+            <div class="stat-header">
+              <h3 class="stat-title">Website Visitors</h3>
+              <div class="stat-icon visitors">
+                <i class="fas fa-eye"></i>
+              </div>
+            </div>
+            <h2 class="stat-value">12,853</h2>
+            <div class="stat-change negative">
+              <i class="fas fa-arrow-down"></i>
+              <span>2.1% from last month</span>
+            </div>
+          </div>
+          
+          <div class="stat-card performance fade-in" style="animation-delay: 0.4s;">
+            <div class="stat-header">
+              <h3 class="stat-title">Performance</h3>
+              <div class="stat-icon performance">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+            </div>
+            <h2 class="stat-value">94.7%</h2>
+            <div class="stat-change positive">
+              <i class="fas fa-arrow-up"></i>
+              <span>3.5% from last month</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-grid">
+          <div class="chart-container fade-in" style="animation-delay: 0.5s;">
+            <div class="chart-header">
+              <h3 class="chart-title">Sales Overview</h3>
+              <div class="chart-actions">
+                <button class="active">Week</button>
+                <button>Month</button>
+                <button>Year</button>
+              </div>
+            </div>
+            <canvas id="lineChart"></canvas>
+          </div>
+          
+          <div class="chart-container fade-in" style="animation-delay: 0.6s;">
+            <div class="chart-header">
+              <h3 class="chart-title">Revenue Sources</h3>
+              <div class="chart-actions">
+                <button class="active">2023</button>
+                <button>2022</button>
+              </div>
+            </div>
+            <canvas id="pieChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="recent-activity fade-in" style="animation-delay: 0.7s;">
+          <div class="chart-header">
+            <h3 class="chart-title">Recent Activity</h3>
+            <a href="#" style="font-size: 0.9rem; color: var(--primary-color);">View All</a>
+          </div>
+          <ul class="activity-list">
+            <li class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <div class="activity-content">
+                <h4>New order received</h4>
+                <p>Order #3245 for $128.99</p>
+              </div>
+              <div class="activity-time">2 min ago</div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <div class="activity-content">
+                <h4>New user registered</h4>
+                <p>Michael Brown signed up</p>
+              </div>
+              <div class="activity-time">15 min ago</div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <div class="activity-content">
+                <h4>Order shipped</h4>
+                <p>Order #3241 has been shipped</p>
+              </div>
+              <div class="activity-time">1 hour ago</div>
+            </li>
+            <li class="activity-item">
+              <div class="activity-icon">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="activity-content">
+                <h4>New review received</h4>
+                <p>4-star review for Product X</p>
+              </div>
+              <div class="activity-time">3 hours ago</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
